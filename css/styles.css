@@ -67,6 +67,14 @@ ul {
   /* padding: 94px 0; */
 }
 
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 /* Шапка */
 
 /* Логотип */
@@ -299,13 +307,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.main-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-
+.samples-title {
   margin-bottom: 50px;
 }
 
@@ -367,11 +369,11 @@ ul {
   padding-top: 0;
 }
 
-.main-list {
+.samples-list {
   display: flex;
 }
 
-.main-list .main-list-item + .main-list-item {
+.samples-list .samples-list-item + .samples-list-item {
   margin-left: 30px;
 }
 
@@ -382,12 +384,6 @@ ul {
 }
 
 .main-team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-
   margin-bottom: 50px;
 }
 
@@ -471,12 +467,6 @@ ul {
 /* Клиенты */
 
 .clients-title {
-  text-align: center;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
 
@@ -708,13 +698,6 @@ ul {
   margin-left: -30px;
 }
 
-.projects-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  cursor: pointer;
-}
-
 .projects-list > .projects-item {
   flex-basis: calc(100% / 3 - 30px);
 
@@ -728,4 +711,11 @@ ul {
 
 .card {
   border: 1px solid #eeeeee;
+}
+
+.projects-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  cursor: pointer;
 }
