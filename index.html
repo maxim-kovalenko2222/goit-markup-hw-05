@@ -48,7 +48,12 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-button button">Заказать услугу</button>
+                <button type="button" class="hero-button button" data-modal-open>Заказать услугу</button>
+            </div>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="modal-button" data-modal-close>&#10005</button>
+                </div>
             </div>
         </section>
     <!-- Чем мы занимаемся -->
@@ -79,9 +84,15 @@
             <div class="container">
                 <h2 class="samples-title title">Чем мы занимаемся</h2>
                 <ul class="samples-list list">
-                    <li class="samples-list-item"><img class="samples-list-img" src="./images/box-1.jpg" alt="Изображение с планшетом" width="370"></li>
-                    <li class="samples-list-item"><img class="samples-list-img" src="./images/box-2.jpg" alt="Изображение с ноутбуком" width="370"></li>
-                    <li class="samples-list-item"><img class="samples-list-img" src="./images/box-3.jpg" alt="Изображение с палирой на планшете" width="370"></li>
+                    <li class="samples-list-item"><img class="samples-list-img" src="./images/box-1.jpg" alt="Изображение с планшетом" width="370">
+                    <div class="samples-list-descr">Десктопные приложения</div>
+                    </li>
+                    <li class="samples-list-item"><img class="samples-list-img" src="./images/box-2.jpg" alt="Изображение с ноутбуком" width="370">
+                    <div class="samples-list-descr">Мобильные приложения</div>
+                    </li>
+                    <li class="samples-list-item"><img class="samples-list-img" src="./images/box-3.jpg" alt="Изображение с палирой на планшете" width="370">
+                    <div class="samples-list-descr">Дизайнерские решения</div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -345,6 +356,7 @@
                 </ul>
             </div>
         </div>
-    </footer>   
+    </footer> 
+    <script src="./js/modal.js"></script>
 </body>
 </html>

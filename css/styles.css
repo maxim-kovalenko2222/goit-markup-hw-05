@@ -144,6 +144,18 @@ ul {
 
 .current {
   color: var(--hover-color);
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
 }
 
 /* Контакты в шапке */
@@ -375,6 +387,81 @@ ul {
 
 .samples-list .samples-list-item + .samples-list-item {
   margin-left: 30px;
+}
+
+.samples-list-item {
+  position: relative;
+}
+
+.samples-list-descr {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  padding: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* задаем фон через псевдоэлемент */
+
+.samples-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+/* ------Модальное окно -------- */
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+}
+
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
 /* Команда */
@@ -713,9 +800,51 @@ ul {
   border: 1px solid #eeeeee;
 }
 
-.projects-item:hover {
+.card:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
   cursor: pointer;
+}
+
+.card-thumb {
+  position: relative;
+
+  /* вариант выравнивания по центру */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.card-thumb::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.card:hover .card-thumb::before {
+  opacity: 1;
+}
+
+.card-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 322px;
+  height: 168px;
+
+  opacity: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--hero-color);
+}
+
+.card:hover .card-text {
+  opacity: 1;
 }
