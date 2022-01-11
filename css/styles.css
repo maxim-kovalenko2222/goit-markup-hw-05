@@ -888,7 +888,9 @@ ul {
   transform: translate(-50%, -50%);
   width: 322px;
   height: 168px;
+}
 
+.card-text-descr {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
